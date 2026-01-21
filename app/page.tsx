@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import DrunkTextAnalyzer from '@/components/DrunkTextAnalyzer'
 import ResultCard from '@/components/ResultCard'
+import SocialLinks from '@/components/SocialLinks'
 
 export interface AnalysisResult {
   regretScore: number
@@ -68,8 +69,11 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Social Links */}
+        <SocialLinks />
+
         {/* Footer */}
-        <footer className="mt-16 text-center text-gray-600 text-sm">
+        <footer className="mt-8 text-center text-gray-600 text-sm">
           <p>Please drink responsibly. Your texts? Not our problem.</p>
         </footer>
       </div>
