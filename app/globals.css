@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --drunk-pink: #ff6b9d;
+  --drunk-purple: #c44dff;
+  --drunk-blue: #4d79ff;
+}
+
+body {
+  background: linear-gradient(135deg, #0a0a0f 0%, #1a0a1f 50%, #0a0a1f 100%);
+  min-height: 100vh;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--drunk-pink), var(--drunk-purple), var(--drunk-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.neon-border {
+  border: 2px solid transparent;
+  background: linear-gradient(#0a0a0f, #0a0a0f) padding-box,
+              linear-gradient(135deg, var(--drunk-pink), var(--drunk-purple)) border-box;
+}
+
+.drunk-glow {
+  box-shadow: 0 0 30px rgba(255, 107, 157, 0.3),
+              0 0 60px rgba(196, 77, 255, 0.2);
+}
+
+@keyframes wobble {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+
+.wobble {
+  animation: wobble 0.5s ease-in-out;
+}
