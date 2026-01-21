@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import './globals.css'
 
 const baseUrl = process.env.VERCEL_URL
@@ -33,9 +34,15 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/icon.svg" />
+        <meta name="theme-color" content="#7c3aed" />
+      </head>
       <body className="antialiased text-white">
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
